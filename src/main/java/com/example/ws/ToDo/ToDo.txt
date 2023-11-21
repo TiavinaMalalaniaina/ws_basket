@@ -8,9 +8,10 @@ OBJECTIF:    SCORE POUR UN MATCH DE BASKET EN TEMPS REEL
 
 BASES:
     joueur(joueur_id, nom, prenom, dtn, taille, poids,
-    equipe
-    equipe_joueur
-    match
-    match_changement
-    type_action
-    action
+    equipe(equipe_id, nom)
+    equipe_joueur(equipe_id, joueur_id)
+    match(match_id, equipe1_id, equipe2_id, encours)
+    match_changement(match_changement_id, temps, match_id, equipe_entrant, equipe_sortant)
+    type_action(type_action_id, nom)
+    type_action_valeur(type_action_id, valuer)
+    action(action_id, temps, match_id, equipe_id, type_action_id)
