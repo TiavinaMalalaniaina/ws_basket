@@ -1,0 +1,16 @@
+        WS(spring boot)
+
+OBJECTIF:    SCORE POUR UN MATCH DE BASKET EN TEMPS REEL
+
+        ENTREE:     rebond offensif/defensif pour un jour , point marque(1, 2, 3),fautes,dribles
+        SORTIE:     liste des equipe
+                    joueurs avec leurs statistiques
+
+BASES:
+    joueur(joueur_id, nom, prenom, dtn, taille, poids,
+    equipe
+    equipe_joueur
+    match
+    match_changement
+    type_action
+    action
