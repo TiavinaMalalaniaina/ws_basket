@@ -1,13 +1,18 @@
-FROM openjdk:17-jdk-alpine
+FROM ubuntu:latest
 
-WORKDIR /app
+RUN apt-get update && \
+    apt-get install -y postgresql && \
+    apt-get install -y openjdk-17-jdk
 
-COPY target/WS-0.0.1-SNAPSHOT.jar /app/WS-0.0.1-SNAPSHOT.jar
+EXPOSE 5432
 
-COPY src/main/java/com/example/ws/Data/Data.sql /docker-entrypoint-initdb.d/init.sql
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=malalaniaina
+ENV POSTGRES_DB=basket
+
+COPY src/main/java/com/example/ws/Data/Data.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 8080
 
-RUN apk --no-cache add postgresql
-
-CMD ["java", "-jar", "/app/WS-0.0.1-SNAPSHOT.jar"]
+COPY target/ws-0.0.1-SNAPSHOT.jar /app/ws-0.0.1-SNAPSHOT.jar
+CMD ["java", "-jar", "/app/ws-0.0.1-SNAPSHOT.jar"]
