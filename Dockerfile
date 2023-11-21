@@ -1,18 +1,14 @@
-FROM ubuntu:latest
+# Utiliser une image de base avec Java 17
+FROM openjdk:17-jdk-alpine
 
-RUN apt-get update && \
-    apt-get install -y postgresql && \
-    apt-get install -y openjdk-17-jdk
+# Définir le répertoire de travail
+WORKDIR /app
 
-EXPOSE 5432
+# Copier le fichier JAR de votre projet dans le conteneur
+COPY target/ws-0.0.1-SNAPSHOT.jar /app/ws-0.0.1-SNAPSHOT.jar
 
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_PASSWORD=malalaniaina
-ENV POSTGRES_DB=basket
-
-COPY src/main/java/com/example/ws/Data/Data.sql /docker-entrypoint-initdb.d/
-
+# Exposer le port sur lequel votre application Spring Boot écoute
 EXPOSE 8080
 
-COPY target/ws-0.0.1-SNAPSHOT.jar /app/ws-0.0.1-SNAPSHOT.jar
+# Commande pour exécuter votre application Spring Boot
 CMD ["java", "-jar", "/app/ws-0.0.1-SNAPSHOT.jar"]
