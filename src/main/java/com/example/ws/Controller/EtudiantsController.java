@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:8100", allowedHeaders = "*")
 public class EtudiantsController {
     
     @GetMapping("etudiants")
@@ -26,7 +26,7 @@ public class EtudiantsController {
         }
     }
 
-    @PostMapping("save-etudiants")
+    @PostMapping("etudiants")
     public Bag save(@RequestBody String nom) throws Exception {
         try {
             Etudiant etudiant = new Etudiant();
