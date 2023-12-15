@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8100", allowedHeaders = "*")
 public class EtudiantsController {
     
     @GetMapping("etudiants")
