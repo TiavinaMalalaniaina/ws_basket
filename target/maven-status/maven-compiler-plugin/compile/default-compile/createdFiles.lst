@@ -7,6 +7,7 @@ com\example\ws\Controller\EtudiantsController.class
 com\example\ws\Model\MatchChangement.class
 com\example\ws\Model\Action.class
 com\example\ws\Model\Match.class
+com\example\util\DBConnection.class
 com\example\ws\Model\Etudiant.class
 com\example\ws\Model\Joueur.class
 com\example\ws\Model\Bag.class
