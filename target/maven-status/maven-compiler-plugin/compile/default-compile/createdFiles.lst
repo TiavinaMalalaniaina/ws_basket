@@ -1,4 +1,5 @@
 com\example\ws\Model\EquipeJoueur.class
+com\example\ws\config\CorsConfig.class
 com\example\ws\Model\Equipe.class
 com\example\ws\Model\TypeActionValeur.class
 com\example\ws\Model\TypeAction.class
