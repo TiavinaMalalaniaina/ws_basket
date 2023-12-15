@@ -1,0 +1,13 @@
+com\example\ws\Model\EquipeJoueur.class
+com\example\ws\Model\Equipe.class
+com\example\ws\Model\TypeActionValeur.class
+com\example\ws\Model\TypeAction.class
+com\example\ws\Model\Statistique.class
+com\example\ws\Controller\EtudiantsController.class
+com\example\ws\Model\MatchChangement.class
+com\example\ws\Model\Action.class
+com\example\ws\Model\Match.class
+com\example\ws\Model\Etudiant.class
+com\example\ws\Model\Joueur.class
+com\example\ws\Model\Bag.class
+com\example\ws\WsApplication.class
