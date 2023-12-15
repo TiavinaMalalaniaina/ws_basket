@@ -23,7 +23,7 @@ public class WsApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/etudiants").allowedOrigins("http://localhost:8100, http://localhost:8080, http://localhost:4200, *");
+				registry.addMapping("/etudiants").allowedOrigins("*");
 			}
 		};
 	}
